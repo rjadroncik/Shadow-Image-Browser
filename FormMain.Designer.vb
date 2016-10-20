@@ -22,13 +22,13 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim SplitContainer1 As System.Windows.Forms.SplitContainer
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
-        Me.TreeView = New System.Windows.Forms.TreeView
-        Me.ListView = New System.Windows.Forms.ListView
+        Me.TreeView = New System.Windows.Forms.TreeView()
         Me.TreeNodeImageList = New System.Windows.Forms.ImageList(Me.components)
-        SplitContainer1 = New System.Windows.Forms.SplitContainer
+        Me.ListView = New System.Windows.Forms.ListView()
+        SplitContainer1 = New System.Windows.Forms.SplitContainer()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
@@ -62,6 +62,14 @@ Partial Class FormMain
         Me.TreeView.Size = New System.Drawing.Size(334, 562)
         Me.TreeView.TabIndex = 0
         '
+        'TreeNodeImageList
+        '
+        Me.TreeNodeImageList.ImageStream = CType(resources.GetObject("TreeNodeImageList.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.TreeNodeImageList.TransparentColor = System.Drawing.Color.Transparent
+        Me.TreeNodeImageList.Images.SetKeyName(0, "ClosedFolder")
+        Me.TreeNodeImageList.Images.SetKeyName(1, "OpenFolder")
+        Me.TreeNodeImageList.Images.SetKeyName(2, "zip.ico")
+        '
         'ListView
         '
         Me.ListView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -73,20 +81,13 @@ Partial Class FormMain
         Me.ListView.UseCompatibleStateImageBehavior = False
         Me.ListView.View = System.Windows.Forms.View.List
         '
-        'TreeNodeImageList
-        '
-        Me.TreeNodeImageList.ImageStream = CType(resources.GetObject("TreeNodeImageList.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.TreeNodeImageList.TransparentColor = System.Drawing.Color.Transparent
-        Me.TreeNodeImageList.Images.SetKeyName(0, "ClosedFolder")
-        Me.TreeNodeImageList.Images.SetKeyName(1, "OpenFolder")
-        Me.TreeNodeImageList.Images.SetKeyName(2, "zip.ico")
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(970, 562)
         Me.Controls.Add(SplitContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormMain"
         Me.Text = "Shadow Image Browser"
         SplitContainer1.Panel1.ResumeLayout(False)
