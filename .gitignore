@@ -1,0 +1,9 @@
+Bin/*
+!/Bin/Data
+ipch
+*.suo
+*.sdf
+*.tlog
+*.opensdf
+/ShadowGL.VC.db
+/obj/Debug
